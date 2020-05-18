@@ -1,0 +1,125 @@
+
+
+#container {
+    position: relative;
+}
+
+#cubecanvas {
+    z-index: 1;
+    /* width: 100%;
+    height: 300px; */
+}
+
+.canvas { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+}
+
+p {
+    text-align: center;
+    margin: 10;
+    font-size: 13px;
+}
+
+h1{
+    text-align: center;
+    font-size: 15px;
+}
+
+#overlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 1;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+#overlay > div {
+	text-align: center;
+}
+
+#overlay > div > button {
+	height: 20px;
+	background: transparent;
+	color: #ffffff;
+	outline: 1px solid #ffffff;
+	border: 0px;
+	cursor: pointer;
+}
+
+#overlay > div > p {
+	color: #777777;
+	font-size: 13px;
+}
+
+button {
+	cursor: pointer;
+    text-transform: uppercase;
+    pointer-events: auto;
+}
+
+body {
+	margin: 0;
+	background-color: #000;
+	color: #fff;
+	font-family: Monospace;
+	font-size: 13px;
+	line-height: 24px;
+	overscroll-behavior: none;
+}
+
+#camera, #camera--view, #camera--sensor, #camera--output{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#camera--view, #camera--sensor, #camera--output{
+    transform: scaleX(-1);
+    filter: FlipH;
+}
+/* #camera--trigger{
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 100px);
+} */
+#camera--trigger{
+    height: 20px;
+	background: black;
+	color: #ffffff;
+	outline: 1px solid #ffffff;
+	border: 0px;
+    cursor: pointer;
+    text-align: center;
+    bottom: 30px;
+    left: calc(50% - 100px);
+    width: 200px;
+    position: fixed;
+}
+.taken{
+    height: 100px!important;
+    width: 100px!important;
+    transition: all 0.5s ease-in;
+    border: solid 3px white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}

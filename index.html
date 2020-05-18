@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <title>RoomVer</title>
+        <meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> -->
+		<script type="text/javascript" src="Scripts/three.min.js"></script>
+	</head>
+	<body>
+		<div id="overlay">
+			<div>
+				<button id="startButton">Start</button>
+				<p>Using device orientation might require a user interaction.</p>
+			</div>
+		</div>
+		<!-- Camera -->
+		<main id="camera">
+			<div id="container">
+				<!-- Camera sensor -->
+				<canvas class="canvas" id="cubecanvas"></canvas>
+				<canvas class="canvas" id="camera--sensor"></canvas>
+					<a-scene class="canvas" id="cubecanvas">
+						<a-box id="box" position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+						<a-box id="box" position="-1 1.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+						<a-box id="box" position="1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+						<a-box id="box" position="1 1.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+				  	</a-scene>	
+			</div>
+		    
+		    <!-- Camera view -->
+		    <video id="camera--view" autoplay playsinline></video>
+		    
+		    <!-- Camera output -->
+		    <img src="//:0" alt="" id="camera--output">
+
+		    <!-- Camera trigger -->
+		    <button id="camera--trigger">Take a picture</button>
+		</main>
+
+		<!-- Reference to JavaScript files -->
+		<script type="text/javascript" src="Scripts/DeviceCameraControl.js"></script>
+        <script>
+           	var startButton = document.getElementById( 'startButton' );
+			startButton.addEventListener( 'click', function () {
+				cameraStart();
+				init();
+				animate();
+
+			}, false );
+
+			function init(){
+				var overlay = document.getElementById( 'overlay' );
+				overlay.remove();
+			}
+
+			function animate() {
+				window.requestAnimationFrame( animate );
+			}
+		</script>
+	</body>
+</html>
