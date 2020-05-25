@@ -113,6 +113,14 @@ body {
     width: 200px;
     position: fixed;
 }
+
+#bigbluearrow {
+    height: 20px;
+    bottom: 30px;
+    left: calc(50% - 100px);
+    width: 200px;
+    position: fixed;
+}
 .taken{
     height: 100px!important;
     width: 100px!important;
