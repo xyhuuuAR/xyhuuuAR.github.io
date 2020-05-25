@@ -16,10 +16,18 @@
     left: 0; 
 }
 
-p {
+/* p {
     text-align: center;
     margin: 10;
     font-size: 13px;
+} */
+
+#directionGuide {
+    text-align: center;
+    font-size: 13px;
+    width: 200px;
+    margin-left: 48em;
+    margin-top: 12em;
 }
 
 h1{
