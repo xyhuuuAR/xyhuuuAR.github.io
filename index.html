@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script type="text/javascript" src="Scripts/DeviceOrientationHandler.js"></script>
+		<script type="text/javascript" src="Scripts/Arrow.js"></script>
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	</head>
@@ -21,16 +22,15 @@
 			<div id="container">
 				<!-- Camera sensor -->
 				<canvas class="canvas" id="camera--sensor"></canvas>
-					<div class="canvas" id="cubecanvas">
-						<p id="directionGuide">Slowly move to your right</p>
-						<svg class="direction" id="bigbluearrow">
-							<path d=" M 30 60
-									L 50 20
-									L 10 20
-									L 30 60"
-									stroke="white" stroke-width="2" fill="blue" id="triangle"/>
-						</svg>
-					</div>	
+				<div class="canvas" id="cubecanvas">
+					<svg class="direction" id="bigbluearrow">
+						<path d=" M 30 60
+								L 50 20
+								L 10 20
+								L 30 60"
+								stroke="white" stroke-width="2" fill="blue" id="triangle"/>
+					</svg>
+				</div>	
 			</div>
 		    
 		    <!-- Camera view -->
