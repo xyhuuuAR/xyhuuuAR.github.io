@@ -23,6 +23,7 @@
 } */
 
 #directionGuide {
+    z-index: 1;
     text-align: center;
     font-size: 13px;
     margin-left: 48em;
