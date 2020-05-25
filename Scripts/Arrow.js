@@ -9,12 +9,18 @@ window.onload = function () {
                 .duration(500)
                 .ease(d3.easeLinear)
                 .attr('fill', 'green')
+            
+            // unhide camera button
+            document.getElementById('camera--trigger').style.visibility = 'visible';
 
         } else {
             pathtriangle.transition()
                 .duration(500)
                 .ease(d3.easeLinear)
                 .attr('fill', 'blue')
+
+            // hide camera button
+            document.getElementById('camera--trigger').style.visibility = 'hidden';
         }
 
     }

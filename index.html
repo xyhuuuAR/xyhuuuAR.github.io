@@ -19,10 +19,32 @@
 		</div>
 		<!-- Camera -->
 		<main id="camera">
+			<div class="infotable">
+				<!-- <h2>Device Orientation</h2> -->
+				<table>
+					<tr>
+						<td>Event Supported</td>
+						<td id="doEvent"></td>
+					</tr>
+					<tr>
+						<td>Tilt Left/Right [gamma]</td>
+						<td id="doTiltLR"></td>
+					</tr>
+					<tr>
+						<td>Tilt Front/Back [beta]</td>
+						<td id="doTiltFB"></td>
+					</tr>
+					<tr>
+						<td>Direction [alpha]</td>
+						<td id="doDirection"></td>
+					</tr>
+				</table>
+			</div>
 			<div id="container">
 				<!-- Camera sensor -->
 				<canvas class="canvas" id="camera--sensor"></canvas>
 				<div class="canvas" id="cubecanvas">
+					<p></p>
 					<svg class="direction" id="bigbluearrow">
 						<path d=" M 30 60
 								L 50 20
