@@ -19,7 +19,7 @@ window.onload = function(){
                      { "x": 25,  "y": 30}];
     
     //This is the accessor function we talked about above
-    var lineFunction = svgbigbluearrow.line()
+    var lineFunction = d3.svg.line()
                              .x(function(d) { return d.x; })
                              .y(function(d) { return d.y; })
                              .interpolate("linear");
