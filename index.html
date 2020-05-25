@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script type="text/javascript" src="Scripts/DeviceOrientationHandler.js"></script>
-		<script type="text/javascript" src="Scripts/Arrow.js"></script>
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	</head>
@@ -23,7 +22,13 @@
 				<!-- Camera sensor -->
 				<canvas class="canvas" id="camera--sensor"></canvas>
 					<div class="canvas" id="cubecanvas">
-						<svg class="direction" id="bigbluearrow"></svg>
+						<svg class="direction" id="bigbluearrow" width="50" height="50">
+							<path d=" M 15 10
+									L 25 30
+									L 05 30
+									L 15 10"
+									stroke="white" stroke-width="2" fill="blue" />
+						</svg>
 						<img id="cameraIcon" src="ar-camera.svg" onerror="this.onerror=null; this.src='ar-camera.png'" width="50" height="50">
 					</div>	
 			</div>
