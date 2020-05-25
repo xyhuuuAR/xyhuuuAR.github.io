@@ -5,14 +5,15 @@
         <title>MERT AR</title>
         <meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-		<script type="text/javascript" src="Scripts/three.min.js"></script>
+		<script type="text/javascript" src="Scripts/DeviceOrientationHandler.js"></script>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	</head>
 	<body>
 		<div id="overlay">
 			<div>
 				<button id="startButton">Start</button>
-				<p>Using device camera might require a user interaction.</p>
+				<p>Using device motion might require a user interaction.</p>
 			</div>
 		</div>
 		<!-- Camera -->
@@ -20,15 +21,10 @@
 			<div id="container">
 				<!-- Camera sensor -->
 				<canvas class="canvas" id="camera--sensor"></canvas>
-					<a-scene class="canvas" id="cubecanvas">
-						<a-box id="box" position="0 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-						<a-box id="box" position="0 3.5 -3" rotation="0 45 0" color="#ff1100"></a-box>
-						<a-box id="box" position="3 0.5 -1" rotation="0 45 0" color="#fffb00"></a-box>
-						<a-box id="box" position="-3 0.5 -1" rotation="0 45 0" color="#9d00ff"></a-box>
-						<!-- <a-box id="box" position="3 0.5 -3" rotation="0 45 0" color="#9d00ff"></a-box> -->
-						<!-- <a-box id="box" position="-3 0.5 -3" rotation="0 45 0" color="#9d00ff"></a-box> -->
-						<!-- <a-box id="box" position="50 0.5 -3" rotation="0 45 0" color="#9d00ff"></a-box> -->
-				  	</a-scene>	
+					<div class="canvas" id="cubecanvas">
+						<svg class="direction" id="bigbluearrow"></svg>
+						<img id="cameraIcon" src="ar-camera.svg" onerror="this.onerror=null; this.src='ar-camera.png'">
+					</div>	
 			</div>
 		    
 		    <!-- Camera view -->
@@ -46,6 +42,7 @@
         <script>
            	var startButton = document.getElementById( 'startButton' );
 			startButton.addEventListener( 'click', function () {
+				requestOrientationPermission();
 				cameraStart();
 				init();
 				animate();
