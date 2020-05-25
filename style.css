@@ -106,6 +106,10 @@ body {
     transform: scaleX(-1);
     filter: FlipH;
 }
+
+#camera--output {
+    z-index: 2;
+}
 /* #camera--trigger{
     width: 200px;
     background-color: black;
