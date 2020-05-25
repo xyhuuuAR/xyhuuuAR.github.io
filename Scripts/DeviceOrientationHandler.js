@@ -11,6 +11,7 @@ function requestOrientationPermission() {
         alert("Orientation access status: " + permissionState);
         if (permissionState === 'granted') {
             if (window.DeviceOrientationEvent) {
+                alert(window.orientation);
             } else {
             } 
         }
@@ -22,6 +23,7 @@ function requestOrientationPermission() {
     {
         // alert("window.DeviceOrientationEvent: " + window.DeviceOrientationEvent);
         if (window.DeviceOrientationEvent) {
+            alert(window.orientation);
         }
     }
   }
