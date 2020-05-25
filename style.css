@@ -116,9 +116,9 @@ body {
 
 #bigbluearrow {
     z-index: 1;
-    height: 50px;
+    height: 60px;
     bottom: 30px;
-    left: calc(50% - 100px);
+    left: calc(50% - 30px);
     width: 200px;
     position: fixed;
 }
