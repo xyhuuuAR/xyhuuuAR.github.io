@@ -5,19 +5,20 @@ window.onload = function () {
         var dir = Math.round(event.alpha);
 
         if (dir >= 43 && dir < 46) {
-            pathtriangle.transition()
-                .duration(500)
-                .ease(d3.easeLinear)
-                .attr('fill', 'green')
-            
+            // hide arrow
+            document.getElementById('triangle').style.visibility = 'hidden';
+
             // unhide camera button
             document.getElementById('camera--trigger').style.visibility = 'visible';
 
         } else {
-            pathtriangle.transition()
-                .duration(500)
-                .ease(d3.easeLinear)
-                .attr('fill', 'blue')
+            // unhide arrow
+            document.getElementById('triangle').style.visibility = 'visible';
+
+            // pathtriangle.transition()
+            //     .duration(500)
+            //     .ease(d3.easeLinear)
+            //     .attr('fill', 'blue')
 
             // hide camera button
             document.getElementById('camera--trigger').style.visibility = 'hidden';
